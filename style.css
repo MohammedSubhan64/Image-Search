@@ -1,0 +1,130 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: LightGray;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    width: 90%;
+    background-color: White;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color:  #33b249;
+    /* color: MediumSlateBlue; */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(108, 92, 231, 0.3);
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid LightGray;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: MediumSlateBlue;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: MediumSlateBlue;
+    color: White;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(108, 92, 231, 0.2);
+}
+
+button:hover {
+    background-color: DarkSlateBlue;
+    transform: translateY(-3px);
+}
+
+/* Image Container Styles */
+.image-container {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-image {
+    width: 100%;
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.loaded .result-image {
+    opacity: 1;
+}
+
+.result-image:hover {
+    transform: scale(1.05);
+}
+
+/* Refresh Button Styles */
+.refresh-button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: LightCoral;
+    color: White;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(235, 59, 90, 0.2);
+}
+
+.refresh-button:hover {
+    background-color: Crimson;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"] {
+        width: 100%;
+    }
+}
